@@ -1,0 +1,13 @@
+﻿  Compiling CUDA source file Add.cu...
+  
+  D:\Git\CUDAPlayground\CudaPlayground\FirstTest>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\bin\HostX86\x64" -x cu  -I./ -I../common/inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"     --keep-dir x64\Release -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Fdx64\Release\vc142.pdb /FS /Zi  /MT " -o x64\Release\Add.cu.obj "D:\Git\CUDAPlayground\CudaPlayground\FirstTest\Add.cu" 
+D:/Git/CUDAPlayground/CudaPlayground/FirstTest/Add.cu(38): warning : variable "s_x" was declared but never referenced
+  
+D:/Git/CUDAPlayground/CudaPlayground/FirstTest/Add.cu(38): warning : variable "s_y" was declared but never referenced
+  
+  Add.cu
+D:/Git/CUDAPlayground/CudaPlayground/FirstTest/Add.cu(38): warning C4101: 's_y': unreferenced local variable
+D:/Git/CUDAPlayground/CudaPlayground/FirstTest/Add.cu(38): warning C4101: 's_x': unreferenced local variable
+     Creating library D:\Git\CUDAPlayground\CudaPlayground\x64\Release\FirstTest.lib and object D:\Git\CUDAPlayground\CudaPlayground\x64\Release\FirstTest.exp
+  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+  FirstTest.vcxproj -> D:\Git\CUDAPlayground\CudaPlayground\x64\Release\FirstTest.exe
