@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include "signals_unity_bridge.h"
 
-static class SUB_API {
+class SUB_API {
 public:
 
 	SUB_API();

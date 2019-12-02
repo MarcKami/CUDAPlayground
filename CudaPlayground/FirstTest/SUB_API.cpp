@@ -17,7 +17,6 @@ SUB_API::SUB_API() {
 
 		grab_frame = (sub_grab_frame)GetProcAddress(hDLL, "sub_grab_frame");;
 
-		FreeLibrary(hDLL);
 		printf("Signals Unity Bridge DLL Success.\n");
 	} else {
 		printf("¡Error Loading Signals Unity Bridge DLL !\n");
