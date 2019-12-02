@@ -1,13 +1,21 @@
-#include "SUB_API.h"
+/*
+ * Copyright 2019-2020 Marc Martos.  All rights reserved.
+ */
+
 #include "SUB.h"
+#include "B2D.h"
+#include "SUBReader.h"
+
+ // System includes
 #include <stdio.h>
 
 int main(void) {
 	printf("Start\n");
 
-	SUB_API sub_api;
+	SUB sub;
+	B2D b2d;
 
-	SUB entity(&sub_api, "http://vrt-pcl2dash.viaccess-orca.com/loot/vrtogether.mpd");
+	SUBReader entity(&sub, "http://vrt-pcl2dash.viaccess-orca.com/loot/vrtogether.mpd");
 
 	printf("End\n");
 

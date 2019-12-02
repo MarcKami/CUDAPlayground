@@ -1,17 +1,26 @@
 #include "SUB.h"
+
+// System includes
 #include <stdio.h>
 
-SUB::SUB(SUB_API* _api, const char* _url) : api(_api), url(_url) {
-	subHandle = api->create("MyPipeline");
-	if (subHandle != NULL) {
-		//printf("SubReader: sub.create() successful.\n");
-		isPlaying = api->play(subHandle, url);
-		if (!isPlaying) {
-			//printf("SubReader: sub_play() failed, will try again later\n");
-		} else {
-			streamCount = api->get_stream_count(subHandle);
-			//printf("SubReader: streamCount = %d\n", streamCount);
-		}
-	} else
-		//printf("PCSUBReader: sub_create() failed\n");
+SUB::SUB() {
+	HINSTANCE hDLL;
+	hDLL = LoadLibrary("signals-unity-bridge.dll");
+	if (hDLL != NULL) {
+		create = (sub_create)GetProcAddress(hDLL, "sub_create");
+
+		destroy = (sub_destroy)GetProcAddress(hDLL, "sub_destroy");
+
+		get_stream_count = (sub_get_stream_count)GetProcAddress(hDLL, "sub_get_stream_count");
+
+		get_stream_info = (sub_get_stream_info)GetProcAddress(hDLL, "sub_get_stream_info");
+
+		play = (sub_play)GetProcAddress(hDLL, "sub_play");
+
+		grab_frame = (sub_grab_frame)GetProcAddress(hDLL, "sub_grab_frame");;
+
+		printf("SUB DLL Success.\n");
+	} else {
+		printf("¡Error Loading SUB DLL !\n");
+	}
 }

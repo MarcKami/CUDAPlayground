@@ -17,14 +17,15 @@
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="signals_unity_bridge.h" />
+    <ClInclude Include="B2D.h" />
+    <ClInclude Include="SUBReader.h" />
     <ClInclude Include="SUB.h" />
-    <ClInclude Include="SUB_API.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="B2D.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SUBReader.cpp" />
     <ClCompile Include="SUB.cpp" />
-    <ClCompile Include="SUB_API.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0B199E8D-FEB8-42F4-BEE4-BC1357EDEE1E}</ProjectGuid>
