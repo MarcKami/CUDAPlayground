@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="Add.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="API\B2D.cpp">
+      <Filter>API</Filter>
+    </ClCompile>
+    <ClCompile Include="API\SUB.cpp">
+      <Filter>API</Filter>
+    </ClCompile>
+    <ClCompile Include="Workers\Readers\SUBReader.cpp">
+      <Filter>Workers\Readers</Filter>
+    </ClCompile>
+    <ClCompile Include="Workers\Codecs\PCDecoder.cpp">
+      <Filter>Workers\Codecs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="API\B2D.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="API\SUB.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="Workers\Readers\SUBReader.h">
+      <Filter>Workers\Readers</Filter>
+    </ClInclude>
+    <ClInclude Include="Workers\Codecs\PCDecoder.h">
+      <Filter>Workers\Codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="Workers\Token.h">
+      <Filter>Workers</Filter>
+    </ClInclude>
+    <ClInclude Include="Workers\BaseWorker.h">
+      <Filter>Workers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="API">
+      <UniqueIdentifier>{93ca7811-8523-4455-b62b-77283b038596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Workers">
+      <UniqueIdentifier>{7c4a70ad-01f1-4add-aea3-9f0c3c7df104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Workers\Readers">
+      <UniqueIdentifier>{c767d23b-70f3-4b4e-8e7d-fcba6a96d6fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Workers\Codecs">
+      <UniqueIdentifier>{4ea308c5-3bc1-4eb0-a05a-09da7ec688df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

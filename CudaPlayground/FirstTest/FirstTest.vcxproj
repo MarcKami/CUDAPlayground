@@ -17,15 +17,19 @@
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="B2D.h" />
-    <ClInclude Include="SUBReader.h" />
-    <ClInclude Include="SUB.h" />
+    <ClInclude Include="API\B2D.h" />
+    <ClInclude Include="API\SUB.h" />
+    <ClInclude Include="Workers\BaseWorker.h" />
+    <ClInclude Include="Workers\Codecs\PCDecoder.h" />
+    <ClInclude Include="Workers\Readers\SUBReader.h" />
+    <ClInclude Include="Workers\Token.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="B2D.cpp" />
+    <ClCompile Include="API\B2D.cpp" />
+    <ClCompile Include="API\SUB.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="SUBReader.cpp" />
-    <ClCompile Include="SUB.cpp" />
+    <ClCompile Include="Workers\Codecs\PCDecoder.cpp" />
+    <ClCompile Include="Workers\Readers\SUBReader.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0B199E8D-FEB8-42F4-BEE4-BC1357EDEE1E}</ProjectGuid>
@@ -60,7 +64,7 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:/VRTogether/installed/include;../common/inc;$(IncludePath)</IncludePath>
+    <IncludePath>D:\VRTogether\installed\include;../common/inc;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
